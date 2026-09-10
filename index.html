@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | พรรณนิภา ฉายฝาก</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #111;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #e30613;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e30613;
+}
+
+/* HOME */
+.hero {
+    min-height: 90vh;
+    background: linear-gradient(135deg, #111 55%, #d90012 55%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 8%;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.small-title {
+    color: #ffccd0;
+    font-size: 18px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1;
+    margin: 15px 0;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 17px;
+    color: #ddd;
+}
+
+.hero-image {
+    width: 330px;
+    height: 400px;
+    background: white;
+    border-radius: 170px 170px 30px 30px;
+    padding: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 160px 160px 25px 25px;
+}
+
+/* SECTION */
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+}
+
+.section-title span {
+    color: #d90012;
+}
+
+/* ABOUT */
+.about {
+    background: white;
+}
+
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    background: #f5f5f5;
+    padding: 35px;
+    border-left: 7px solid #d90012;
+    border-radius: 15px;
+}
+
+.about-box p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.info-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+/* UNIVERSITY */
+.university {
+    background: #111;
+    color: white;
+}
+
+.uni-card {
+    max-width: 900px;
+    margin: auto;
+    background: #1c1c1c;
+    border-radius: 20px;
+    padding: 40px;
+    border-top: 5px solid #e30613;
+}
+
+.uni-card h3 {
+    font-size: 28px;
+    color: #ff3340;
+    margin-bottom: 15px;
+}
+
+.uni-card h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.uni-card p {
+    line-height: 1.9;
+    color: #ddd;
+}
+
+/* CERTIFICATES */
+.certificates {
+    background: #f7f7f7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card-content h3 {
+    color: #d90012;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* SKILLS */
+.skills {
+    background: white;
+}
+
+.skill-list {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    padding: 25px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    font-size: 19px;
+    background: #fafafa;
+}
+
+.skill span {
+    color: #d90012;
+    font-size: 25px;
+}
+
+/* CONTACT */
+.contact {
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-box p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.contact-box span {
+    color: #ff3340;
+}
+
+/* FOOTER */
+footer {
+    background: #050505;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-image {
+        width: 250px;
+        height: 310px;
+    }
+
+    .info-grid,
+    .cards,
+    .skill-list {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">P<span>P</span></div>
+
+    <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#university">UNIVERSITY</a></li>
+        <li><a href="#certificates">WORKS</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <div class="small-title">
+                MY PERSONAL PORTFOLIO
+            </div>
+
+            <h1>PORTFOLIO</h1>
+
+            <h2>พรรณนิภา ฉายฝาก</h2>
+
+            <p>
+                Student • Engineering • Technology • Creativity
+            </p>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Profile">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="section-title">
+        <h2>ABOUT <span>ME</span></h2>
+    </div>
+
+    <div class="about-box">
+
+        <p>
+            สวัสดีค่ะ ฉันชื่อ พรรณนิภา ฉายฝาก
+            ปัจจุบันกำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาตอนปลาย
+            มีความสนใจด้านเทคโนโลยี วิศวกรรม หุ่นยนต์
+            และการสร้างสรรค์ผลงานใหม่ ๆ
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info">
+                <b>ชื่อ-นามสกุล</b><br>
+                พรรณนิภา ฉายฝาก
+            </div>
+
+            <div class="info">
+                <b>ระดับการศึกษา</b><br>
+                มัธยมศึกษาตอนปลาย
+            </div>
+
+            <div class="info">
+                <b>โรงเรียน</b><br>
+                Ban Bung Uttasahakamnukhro School
+            </div>
+
+            <div class="info">
+                <b>ความสนใจ</b><br>
+                Engineering & Technology
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- UNIVERSITY -->
+<section class="university" id="university">
+
+    <div class="section-title">
+        <h2>MY <span>UNIVERSITY</span></h2>
+    </div>
+
+    <div class="uni-card">
+
+        <h3>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</h3>
+
+        <h4>King Mongkut's University of Technology North Bangkok</h4>
+
+        <p>
+            คณะที่ต้องการเข้าศึกษา :
+            คณะวิศวกรรมศาสตร์
+        </p>
+
+        <br>
+
+        <p>
+            สาขาที่สนใจ :
+            วิศวกรรมการผลิต
+        </p>
+
+        <br>
+
+        <p>
+            เหตุผลที่สนใจสาขานี้ :
+            ฉันมีความสนใจด้านวิศวกรรมและเทคโนโลยี
+            รวมถึงการสร้างและพัฒนาสิ่งต่าง ๆ
+            จึงอยากนำความรู้ไปต่อยอดในการเรียน
+            และพัฒนาตนเองในอนาคต
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CERTIFICATES / WORKS -->
+<section class="certificates" id="certificates">
+
+    <div class="section-title">
+        <h2>CERTIFICATES & <span>WORKS</span></h2>
+    </div>
+
+    <div class="cards">
+
+        <!-- ใบที่ 1 -->
+        <div class="card">
+
+            <img src="certificate1.jpg" alt="Certificate 1">
+
+            <div class="card-content">
+
+                <h3>เกียรติบัตร</h3>
+
+                <p>
+                    รายละเอียดเกียรติบัตร
+                    สามารถเขียนชื่อกิจกรรม
+                    หน่วยงาน และสิ่งที่ได้รับจากกิจกรรม
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ใบที่ 2 -->
+        <div class="card">
+
+            <img src="certificate2.jpg" alt="Certificate 2">
+
+            <div class="card-content">
+
+                <h3>เกียรติบัตร</h3>
+
+                <p>
+                    รายละเอียดกิจกรรมและสิ่งที่ได้เรียนรู้
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ผลงาน -->
+        <div class="card">
+
+            <img src="work1.jpg" alt="Work 1">
+
+            <div class="card-content">
+
+                <h3>ผลงาน / กิจกรรม</h3>
+
+                <p>
+                    รายละเอียดการทำงาน
+                    หน้าที่ที่ได้รับผิดชอบ
+                    และสิ่งที่ได้เรียนรู้
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <img src="work2.jpg" alt="Work 2">
+
+            <div class="card-content">
+
+                <h3>กิจกรรม</h3>
+
+                <p>
+                    การทำงานร่วมกับผู้อื่น
+                    การแก้ไขปัญหา
+                    และการทำงานเป็นทีม
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+
+    <div class="section-title">
+        <h2>MY <span>SKILLS</span></h2>
+    </div>
+
+    <div class="skill-list">
+
+        <div class="skill">
+            <span>💻</span>
+            Basic Python Programming
+        </div>
+
+        <div class="skill">
+            <span>🎨</span>
+            Canva & Graphic Design
+        </div>
+
+        <div class="skill">
+            <span>🤖</span>
+            Robotics & Technology
+        </div>
+
+        <div class="skill">
+            <span>👥</span>
+            Teamwork
+        </div>
+
+        <div class="skill">
+            <span>💬</span>
+            Communication
+        </div>
+
+        <div class="skill">
+            <span>✨</span>
+            Creativity
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="section-title">
+        <h2>CONTACT <span>ME</span></h2>
+    </div>
+
+    <div class="contact-box">
+
+        <p>📧 Email :
+            <span>ใส่อีเมลของเธอ</span>
+        </p>
+
+        <p>📱 Instagram :
+            <span>ใส่ Instagram ของเธอ</span>
+        </p>
+
+        <p>📘 Facebook :
+            <span>ใส่ Facebook ของเธอ</span>
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 Pannipachayfak | Portfolio
+</footer>
+
+</body>
+</html>
