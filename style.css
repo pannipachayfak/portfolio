@@ -1,10 +1,7 @@
-:root {
-    --kmutnb-red: #AC3520;
-    --dark: #171717;
-    --white: #FFFFFF;
-    --light: #F5F5F5;
-    --gray: #666666;
-}
+/* =========================
+   KMUTNB PORTFOLIO
+   Main Color: #AC3520
+   ========================= */
 
 * {
     margin: 0;
@@ -12,16 +9,23 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, Tahoma, sans-serif;
-    background: var(--light);
-    color: var(--dark);
+html {
+    scroll-behavior: smooth;
 }
 
-/* HEADER */
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: #f5f5f5;
+    color: #171717;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+   ========================= */
 
 header {
-    background: var(--kmutnb-red);
+    background: #AC3520;
     width: 100%;
     border-bottom: 4px solid #7f2415;
 }
@@ -35,24 +39,26 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 25px;
 }
 
 .logo {
-    color: white;
-    font-size: 25px;
+    color: #ffffff;
+    font-size: 24px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 22px;
+    gap: 20px;
 }
 
 .menu a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
@@ -62,7 +68,9 @@ nav {
     color: #ffd9d0;
 }
 
-/* HOME */
+/* =========================
+   HOME
+   ========================= */
 
 .hero {
     max-width: 1200px;
@@ -81,24 +89,27 @@ nav {
 }
 
 .small-title {
-    color: var(--kmutnb-red);
+    color: #AC3520;
     font-weight: bold;
     letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
 .hero-text h1 {
     font-size: 70px;
-    color: var(--dark);
+    line-height: 1.1;
+    color: #171717;
+    margin-bottom: 10px;
 }
 
 .hero-text h2 {
     font-size: 32px;
-    color: var(--kmutnb-red);
+    color: #AC3520;
     margin-bottom: 20px;
 }
 
 .hero-text p {
-    color: var(--gray);
+    color: #666666;
     font-size: 18px;
     margin-bottom: 25px;
 }
@@ -108,10 +119,10 @@ nav {
     height: 480px;
     overflow: hidden;
 
-    border: 8px solid white;
+    border: 8px solid #ffffff;
     border-radius: 15px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .hero-image img {
@@ -122,8 +133,9 @@ nav {
 
 .main-button {
     display: inline-block;
-    background: var(--kmutnb-red);
-    color: white;
+
+    background: #AC3520;
+    color: #ffffff;
 
     padding: 13px 30px;
 
@@ -131,13 +143,17 @@ nav {
 
     text-decoration: none;
     font-weight: bold;
+
+    transition: 0.3s;
 }
 
 .main-button:hover {
     background: #7f2415;
 }
 
-/* PAGE */
+/* =========================
+   GENERAL PAGE
+   ========================= */
 
 .page {
     max-width: 1200px;
@@ -151,20 +167,23 @@ nav {
 }
 
 .page-title p {
-    color: var(--kmutnb-red);
+    color: #AC3520;
     font-weight: bold;
     letter-spacing: 4px;
+    margin-bottom: 5px;
 }
 
 .page-title h1 {
     font-size: 45px;
-    color: var(--dark);
+    color: #171717;
 }
 
-/* PROFILE */
+/* =========================
+   PROFILE
+   ========================= */
 
 .profile-box {
-    background: white;
+    background: #ffffff;
     padding: 40px;
     border-radius: 15px;
 
@@ -173,7 +192,7 @@ nav {
 
     gap: 45px;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .profile-image {
@@ -190,7 +209,7 @@ nav {
 }
 
 .profile-info h2 {
-    color: var(--kmutnb-red);
+    color: #AC3520;
     margin-bottom: 20px;
 }
 
@@ -208,21 +227,22 @@ nav {
 }
 
 .info-row span {
-    color: var(--gray);
+    color: #666666;
 }
 
 .content-card {
-    background: white;
+    background: #ffffff;
+
     padding: 35px;
     margin-top: 25px;
 
     border-radius: 15px;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .content-card h2 {
-    color: var(--kmutnb-red);
+    color: #AC3520;
     margin-bottom: 20px;
 }
 
@@ -233,10 +253,12 @@ nav {
 
     margin-bottom: 15px;
 
-    border-left: 5px solid var(--kmutnb-red);
+    border-left: 5px solid #AC3520;
 }
 
-/* SKILLS */
+/* =========================
+   SKILLS
+   ========================= */
 
 .skills-grid {
     display: grid;
@@ -245,15 +267,21 @@ nav {
 }
 
 .skill-card {
-    background: white;
+    background: #ffffff;
 
     padding: 35px;
 
     border-radius: 15px;
 
-    border-top: 5px solid var(--kmutnb-red);
+    border-top: 5px solid #AC3520;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
 }
 
 .skill-icon {
@@ -264,9 +292,9 @@ nav {
     align-items: center;
     justify-content: center;
 
-    background: var(--kmutnb-red);
+    background: #AC3520;
 
-    color: white;
+    color: #ffffff;
 
     border-radius: 10px;
 
@@ -280,45 +308,49 @@ nav {
 }
 
 .skill-card p {
-    color: var(--gray);
+    color: #666666;
 }
 
-/* SOP */
+/* =========================
+   SOP
+   ========================= */
 
 .sop-box {
     max-width: 900px;
     margin: auto;
 
-    background: white;
+    background: #ffffff;
 
     padding: 50px;
 
     border-radius: 15px;
 
-    border-top: 6px solid var(--kmutnb-red);
+    border-top: 6px solid #AC3520;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .sop-box h2 {
-    color: var(--kmutnb-red);
+    color: #AC3520;
     margin-bottom: 25px;
 }
 
 .sop-box p {
-    color: #444;
+    color: #444444;
     margin-bottom: 20px;
     text-align: justify;
 }
 
-/* PORTFOLIO */
+/* =========================
+   PORTFOLIO
+   ========================= */
 
 .portfolio-section {
     margin-bottom: 70px;
 }
 
 .section-title {
-    color: var(--kmutnb-red);
+    color: #AC3520;
 
     font-size: 32px;
 
@@ -326,7 +358,7 @@ nav {
 
     padding-left: 15px;
 
-    border-left: 6px solid var(--kmutnb-red);
+    border-left: 6px solid #AC3520;
 }
 
 .portfolio-grid {
@@ -336,13 +368,19 @@ nav {
 }
 
 .portfolio-card {
-    background: white;
+    background: #ffffff;
 
     overflow: hidden;
 
     border-radius: 12px;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
 }
 
 .portfolio-card img {
@@ -361,21 +399,23 @@ nav {
 }
 
 .card-content h3 {
-    color: var(--kmutnb-red);
+    color: #AC3520;
     margin-bottom: 8px;
 }
 
 .card-content p {
-    color: var(--gray);
+    color: #666666;
 }
 
-/* UNIVERSITY */
+/* =========================
+   UNIVERSITY
+   ========================= */
 
 .university-box {
     max-width: 900px;
     margin: auto;
 
-    background: white;
+    background: #ffffff;
 
     padding: 50px;
 
@@ -383,9 +423,9 @@ nav {
 
     border-radius: 15px;
 
-    border-top: 7px solid var(--kmutnb-red);
+    border-top: 7px solid #AC3520;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .university-symbol {
@@ -398,9 +438,9 @@ nav {
     align-items: center;
     justify-content: center;
 
-    background: var(--kmutnb-red);
+    background: #AC3520;
 
-    color: white;
+    color: #ffffff;
 
     border-radius: 50%;
 
@@ -412,11 +452,13 @@ nav {
 }
 
 .university-box h3 {
-    color: var(--kmutnb-red);
+    color: #AC3520;
     margin-top: 25px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+   ========================= */
 
 .contact-grid {
     display: grid;
@@ -425,7 +467,7 @@ nav {
 }
 
 .contact-card {
-    background: white;
+    background: #ffffff;
 
     padding: 35px;
 
@@ -433,9 +475,9 @@ nav {
 
     border-radius: 15px;
 
-    border-top: 5px solid var(--kmutnb-red);
+    border-top: 5px solid #AC3520;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .contact-icon {
@@ -449,9 +491,9 @@ nav {
     align-items: center;
     justify-content: center;
 
-    background: var(--kmutnb-red);
+    background: #AC3520;
 
-    color: white;
+    color: #ffffff;
 
     border-radius: 50%;
 
@@ -459,22 +501,26 @@ nav {
 }
 
 .contact-card h2 {
-    color: var(--kmutnb-red);
+    color: #AC3520;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
-    background: var(--dark);
+    background: #171717;
 
-    color: white;
+    color: #ffffff;
 
     text-align: center;
 
     padding: 25px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 800px) {
 
@@ -492,6 +538,11 @@ footer {
         font-size: 50px;
     }
 
+    .hero-image {
+        width: 300px;
+        height: 380px;
+    }
+
     .profile-box {
         grid-template-columns: 1fr;
     }
@@ -506,6 +557,11 @@ footer {
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .sop-box,
+    .university-box {
+        padding: 30px 20px;
     }
 
 }
