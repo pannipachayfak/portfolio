@@ -1,7 +1,10 @@
-/* =========================
-   KMUTNB PORTFOLIO
-   Main Color: #AC3520
-   ========================= */
+:root {
+    --kmutnb-red: #AC3520;
+    --dark: #171717;
+    --white: #FFFFFF;
+    --light: #F5F5F5;
+    --gray: #666666;
+}
 
 * {
     margin: 0;
@@ -9,23 +12,16 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, Tahoma, sans-serif;
-    background: #f5f5f5;
-    color: #171717;
-    line-height: 1.6;
+    background: var(--light);
+    color: var(--dark);
 }
 
-/* =========================
-   HEADER
-   ========================= */
+/* HEADER */
 
 header {
-    background: #AC3520;
+    background: var(--kmutnb-red);
     width: 100%;
     border-bottom: 4px solid #7f2415;
 }
@@ -39,26 +35,24 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
 }
 
 .logo {
-    color: #ffffff;
-    font-size: 24px;
+    color: white;
+    font-size: 25px;
     font-weight: bold;
-    letter-spacing: 1px;
-    white-space: nowrap;
+    letter-spacing: 2px;
 }
 
 .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 22px;
 }
 
 .menu a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
@@ -68,9 +62,7 @@ nav {
     color: #ffd9d0;
 }
 
-/* =========================
-   HOME
-   ========================= */
+/* HOME */
 
 .hero {
     max-width: 1200px;
@@ -89,27 +81,24 @@ nav {
 }
 
 .small-title {
-    color: #AC3520;
+    color: var(--kmutnb-red);
     font-weight: bold;
     letter-spacing: 4px;
-    margin-bottom: 10px;
 }
 
 .hero-text h1 {
     font-size: 70px;
-    line-height: 1.1;
-    color: #171717;
-    margin-bottom: 10px;
+    color: var(--dark);
 }
 
 .hero-text h2 {
     font-size: 32px;
-    color: #AC3520;
+    color: var(--kmutnb-red);
     margin-bottom: 20px;
 }
 
 .hero-text p {
-    color: #666666;
+    color: var(--gray);
     font-size: 18px;
     margin-bottom: 25px;
 }
@@ -119,10 +108,10 @@ nav {
     height: 480px;
     overflow: hidden;
 
-    border: 8px solid #ffffff;
+    border: 8px solid white;
     border-radius: 15px;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .hero-image img {
@@ -133,9 +122,8 @@ nav {
 
 .main-button {
     display: inline-block;
-
-    background: #AC3520;
-    color: #ffffff;
+    background: var(--kmutnb-red);
+    color: white;
 
     padding: 13px 30px;
 
@@ -143,17 +131,13 @@ nav {
 
     text-decoration: none;
     font-weight: bold;
-
-    transition: 0.3s;
 }
 
 .main-button:hover {
     background: #7f2415;
 }
 
-/* =========================
-   GENERAL PAGE
-   ========================= */
+/* PAGE */
 
 .page {
     max-width: 1200px;
@@ -167,23 +151,20 @@ nav {
 }
 
 .page-title p {
-    color: #AC3520;
+    color: var(--kmutnb-red);
     font-weight: bold;
     letter-spacing: 4px;
-    margin-bottom: 5px;
 }
 
 .page-title h1 {
     font-size: 45px;
-    color: #171717;
+    color: var(--dark);
 }
 
-/* =========================
-   PROFILE
-   ========================= */
+/* PROFILE */
 
 .profile-box {
-    background: #ffffff;
+    background: white;
     padding: 40px;
     border-radius: 15px;
 
@@ -192,7 +173,7 @@ nav {
 
     gap: 45px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .profile-image {
@@ -209,7 +190,7 @@ nav {
 }
 
 .profile-info h2 {
-    color: #AC3520;
+    color: var(--kmutnb-red);
     margin-bottom: 20px;
 }
 
@@ -227,22 +208,21 @@ nav {
 }
 
 .info-row span {
-    color: #666666;
+    color: var(--gray);
 }
 
 .content-card {
-    background: #ffffff;
-
+    background: white;
     padding: 35px;
     margin-top: 25px;
 
     border-radius: 15px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .content-card h2 {
-    color: #AC3520;
+    color: var(--kmutnb-red);
     margin-bottom: 20px;
 }
 
@@ -253,12 +233,10 @@ nav {
 
     margin-bottom: 15px;
 
-    border-left: 5px solid #AC3520;
+    border-left: 5px solid var(--kmutnb-red);
 }
 
-/* =========================
-   SKILLS
-   ========================= */
+/* SKILLS */
 
 .skills-grid {
     display: grid;
@@ -267,21 +245,15 @@ nav {
 }
 
 .skill-card {
-    background: #ffffff;
+    background: white;
 
     padding: 35px;
 
     border-radius: 15px;
 
-    border-top: 5px solid #AC3520;
+    border-top: 5px solid var(--kmutnb-red);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .skill-icon {
@@ -292,9 +264,9 @@ nav {
     align-items: center;
     justify-content: center;
 
-    background: #AC3520;
+    background: var(--kmutnb-red);
 
-    color: #ffffff;
+    color: white;
 
     border-radius: 10px;
 
@@ -308,49 +280,45 @@ nav {
 }
 
 .skill-card p {
-    color: #666666;
+    color: var(--gray);
 }
 
-/* =========================
-   SOP
-   ========================= */
+/* SOP */
 
 .sop-box {
     max-width: 900px;
     margin: auto;
 
-    background: #ffffff;
+    background: white;
 
     padding: 50px;
 
     border-radius: 15px;
 
-    border-top: 6px solid #AC3520;
+    border-top: 6px solid var(--kmutnb-red);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .sop-box h2 {
-    color: #AC3520;
+    color: var(--kmutnb-red);
     margin-bottom: 25px;
 }
 
 .sop-box p {
-    color: #444444;
+    color: #444;
     margin-bottom: 20px;
     text-align: justify;
 }
 
-/* =========================
-   PORTFOLIO
-   ========================= */
+/* PORTFOLIO */
 
 .portfolio-section {
     margin-bottom: 70px;
 }
 
 .section-title {
-    color: #AC3520;
+    color: var(--kmutnb-red);
 
     font-size: 32px;
 
@@ -358,7 +326,7 @@ nav {
 
     padding-left: 15px;
 
-    border-left: 6px solid #AC3520;
+    border-left: 6px solid var(--kmutnb-red);
 }
 
 .portfolio-grid {
@@ -368,19 +336,13 @@ nav {
 }
 
 .portfolio-card {
-    background: #ffffff;
+    background: white;
 
     overflow: hidden;
 
     border-radius: 12px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-    transition: 0.3s;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .portfolio-card img {
@@ -399,23 +361,21 @@ nav {
 }
 
 .card-content h3 {
-    color: #AC3520;
+    color: var(--kmutnb-red);
     margin-bottom: 8px;
 }
 
 .card-content p {
-    color: #666666;
+    color: var(--gray);
 }
 
-/* =========================
-   UNIVERSITY
-   ========================= */
+/* UNIVERSITY */
 
 .university-box {
     max-width: 900px;
     margin: auto;
 
-    background: #ffffff;
+    background: white;
 
     padding: 50px;
 
@@ -423,9 +383,9 @@ nav {
 
     border-radius: 15px;
 
-    border-top: 7px solid #AC3520;
+    border-top: 7px solid var(--kmutnb-red);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .university-symbol {
@@ -438,9 +398,9 @@ nav {
     align-items: center;
     justify-content: center;
 
-    background: #AC3520;
+    background: var(--kmutnb-red);
 
-    color: #ffffff;
+    color: white;
 
     border-radius: 50%;
 
@@ -452,13 +412,11 @@ nav {
 }
 
 .university-box h3 {
-    color: #AC3520;
+    color: var(--kmutnb-red);
     margin-top: 25px;
 }
 
-/* =========================
-   CONTACT
-   ========================= */
+/* CONTACT */
 
 .contact-grid {
     display: grid;
@@ -467,7 +425,7 @@ nav {
 }
 
 .contact-card {
-    background: #ffffff;
+    background: white;
 
     padding: 35px;
 
@@ -475,9 +433,9 @@ nav {
 
     border-radius: 15px;
 
-    border-top: 5px solid #AC3520;
+    border-top: 5px solid var(--kmutnb-red);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .contact-icon {
@@ -491,9 +449,9 @@ nav {
     align-items: center;
     justify-content: center;
 
-    background: #AC3520;
+    background: var(--kmutnb-red);
 
-    color: #ffffff;
+    color: white;
 
     border-radius: 50%;
 
@@ -501,26 +459,22 @@ nav {
 }
 
 .contact-card h2 {
-    color: #AC3520;
+    color: var(--kmutnb-red);
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* FOOTER */
 
 footer {
-    background: #171717;
+    background: var(--dark);
 
-    color: #ffffff;
+    color: white;
 
     text-align: center;
 
     padding: 25px;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+/* MOBILE */
 
 @media (max-width: 800px) {
 
@@ -538,11 +492,6 @@ footer {
         font-size: 50px;
     }
 
-    .hero-image {
-        width: 300px;
-        height: 380px;
-    }
-
     .profile-box {
         grid-template-columns: 1fr;
     }
@@ -557,11 +506,6 @@ footer {
 
     .contact-grid {
         grid-template-columns: 1fr;
-    }
-
-    .sop-box,
-    .university-box {
-        padding: 30px 20px;
     }
 
 }
