@@ -1,1 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+    background: #f7f4ff;
+    color: #292333;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    min-height: 75px;
+    background: rgba(255, 255, 255, 0.96);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7048b8;
+}
+
+.menu {
+    display: flex;
+    gap: 8px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #38313f;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #7048b8;
+    color: white;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.hero {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 60px 8%;
+    background:
+        radial-gradient(circle at 10% 20%, #eadfff 0, transparent 30%),
+        radial-gradient(circle at 90% 80%, #f0dfff 0, transparent 30%),
+        #f8f5ff;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    color: #8b61c9;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 75px;
+    line-height: 1.1;
+    color: #7048b8;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero-text > p {
+    font-size: 18px;
+    color: #625b68;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 30px;
+    background: #7048b8;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(112, 72, 184, 0.25);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background: #573394;
+}
+
+.hero-image img {
+    width: 340px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(60, 30, 100, 0.2);
+    border: 8px solid white;
+}
+
+
+/* =========================
+   GENERAL PAGE
+========================= */
+
+.page {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title p {
+    color: #8b61c9;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.page-title h1 {
+    font-size: 42px;
+    color: #7048b8;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-box {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    background: white;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(50, 30, 80, 0.08);
+}
+
+.profile-picture img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    color: #7048b8;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item strong {
+    color: #7048b8;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.content-section {
+    margin-top: 50px;
+}
+
+.content-section > h2 {
+    color: #7048b8;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.education {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.education-card,
+.family-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(50, 30, 80, 0.07);
+}
+
+.education-card h3,
+.family-card h3 {
+    color: #7048b8;
+    margin-bottom: 12px;
+}
+
+.family {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* =========================
+   SOP
+========================= */
+
+.sop-box {
+    background: white;
+    max-width: 950px;
+    margin: auto;
+    padding: 55px 65px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(50, 30, 80, 0.08);
+}
+
+.sop-box h2 {
+    color: #7048b8;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.sop-box p {
+    margin-bottom: 25px;
+    text-indent: 40px;
+    font-size: 17px;
+    color: #4f4955;
+}
+
+.quote {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 25px;
+    color: #7048b8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio-section {
+    margin-bottom: 70px;
+}
+
+.section-title {
+    color: #7048b8;
+    font-size: 32px;
+    margin-bottom: 30px;
+    border-left: 6px solid #7048b8;
+    padding-left: 15px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.portfolio-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(50, 30, 80, 0.08);
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(50, 30, 80, 0.14);
+}
+
+.portfolio-card > img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: contain;
+    background: #f1edf8;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    color: #7048b8;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #625b68;
+}
+
+
+/* =========================
+   UNIVERSITY
+========================= */
+
+.university-box {
+    background: white;
+    text-align: center;
+    padding: 60px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(50, 30, 80, 0.08);
+}
+
+.university-icon {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.university-box h2 {
+    color: #7048b8;
+    margin-bottom: 20px;
+}
+
+.university-box h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.reason-box,
+.future-box {
+    margin-top: 35px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(50, 30, 80, 0.08);
+}
+
+.reason-box h2,
+.future-box h2 {
+    color: #7048b8;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: white;
+    padding: 35px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(50, 30, 80, 0.08);
+}
+
+.contact-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    color: #7048b8;
+    margin-bottom: 10px;
+}
+
+.contact-message {
+    margin-top: 40px;
+    padding: 45px;
+    text-align: center;
+    background: linear-gradient(135deg, #eadfff, #f6eaff);
+    border-radius: 25px;
+}
+
+.contact-message h2 {
+    color: #7048b8;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #30263a;
+    color: white;
+    margin-top: 50px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .profile-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .page {
+        width: 92%;
+        padding: 45px 0;
+    }
+
+    .page-title h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 360px;
+    }
+
+    .profile-box {
+        padding: 25px;
+    }
+
+    .profile-picture img {
+        width: 230px;
+        height: 290px;
+    }
+
+    .sop-box {
+        padding: 30px 25px;
+    }
+
+    .university-box {
+        padding: 35px 20px;
+    }
+
+    .reason-box,
+    .future-box {
+        padding: 30px 25px;
+    }
+
+}
